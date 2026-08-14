@@ -67,7 +67,7 @@ The test directory contains ModBus simulators for testing:
 ├── main.ts               -- Adapter entry point
 ├── io-package.json       -- ioBroker adapter metadata
 ├── package.json          -- Node.js dependencies and scripts
-├── tasks.js              -- Custom build script
+├── tasks.ts              -- Custom build script (run with ts-node)
 ├── tsconfig.json         -- TypeScript configuration
 └── eslint.config.mjs     -- ESLint configuration
 ```
@@ -108,7 +108,7 @@ The test directory contains ModBus simulators for testing:
 - No compilation output (just type checking)
 
 ### Build system:
-- Custom build script in `tasks.js`
+- Custom build script in `tasks.ts` (executed via `ts-node --project tsconfig.tasks.json`)
 - Uses `@iobroker/build-tools` for React compilation
 - Vite-based build system for modern React features
 

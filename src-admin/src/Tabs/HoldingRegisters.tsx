@@ -180,9 +180,7 @@ export default class HoldingRegisters extends BaseRegisters {
                     'int8le',
                     'signExtendedInt8be',
                     'signExtendedInt8le',
-                ].includes(
-                    value as Modbus.RegisterEntryType,
-                )
+                ].includes(value as Modbus.RegisterEntryType)
             ) {
                 data[index].len = 1;
             } else if (

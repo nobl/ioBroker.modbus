@@ -21,7 +21,7 @@ npm run test:package         # Package structure validation (test/testPackageFil
 npm run test:integration     # Integration test: starts a fresh js-controller (mocha test/testAdapter.ts --exit)
 ```
 
-Individual admin UI build steps (via `node tasks.js`):
+Individual admin UI build steps (via `ts-node --project tsconfig.tasks.json tasks.ts`):
 - `npm run 0-clean` - Clean admin/ directory (preserves modbus.png)
 - `npm run 1-npm` - Install src-admin/ dependencies
 - `npm run 2-build` - Vite build of React app
@@ -65,7 +65,8 @@ Four register types configurable in admin UI, each with address ranges:
 - `io-package.json` - Adapter metadata, default native config, dependency requirements (js-controller >=6.0.11, admin >=6.17.14)
 - `tsconfig.json` - Type checking only (noEmit: true), target ES2022, module Node16, strict
 - `tsconfig.build.json` - Extends tsconfig.json, enables emit to `./build/`
-- `eslint.config.mjs` - Uses `@iobroker/eslint-config`, ignores src-admin/, admin/, test/, build/, tasks.js
+- `tsconfig.tasks.json` - Type-check/ts-node config for the root `tasks.ts` build script (`npm run check-tasks`)
+- `eslint.config.mjs` - Uses `@iobroker/eslint-config`, ignores src-admin/, admin/, test/, build/, tasks.ts
 
 ## Requirements
 
