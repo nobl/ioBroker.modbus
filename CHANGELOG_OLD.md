@@ -1,4 +1,7 @@
 # Older changes
+## 8.2.1 (2026-06-27)
+- (@GermanBluefox) Allowed the selection of port by USB path
+
 ## 8.2.0 (2026-05-29)
 - (@GermanBluefox) Added selection of the serial device by its stable USB ID (vendor/product/serial), so the connection keeps working even if the OS reassigns the port name
 
