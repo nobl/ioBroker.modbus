@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.4.3",
-    "@iobroker/modbus": "^7.7.0"
+    "@iobroker/modbus": "git+https://github.com/nobl/modbus.git#fix-poll-reconnect"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^5.2.1",
